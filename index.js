@@ -7,5 +7,8 @@ const bcrypt = require('bcrypt');
 
 const port = 5000; //it is 5000 because react is 3000 by default
 
+app.get('/', (req, res) => {
+    res.send("Hello World!")
+})
 
-app.listen(port, () => console.log(`Server started on PORT ${port}`));
+app.listen(process.env.PORT || port, () => console.log(`Server started on PORT ${port}`));
